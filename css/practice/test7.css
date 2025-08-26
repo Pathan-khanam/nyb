@@ -1,0 +1,51 @@
+div{
+    height: 50px;
+    width: 90px;
+    background-color: chocolate;
+   /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: steps(3);
+    transition-delay: 1s;*/
+    position:absolute;
+    top: 300px;
+    left: 300px;
+    transition: all 2s steps(3) 1s;
+    /*transform: rotate(45deg);*/
+    transform: scale(3,4);
+
+}
+
+/*@media (max-width : 300px) {
+    div {
+        background-color: green;
+    }
+}
+@media (min-width : 300px) and (max-width: 400px){
+
+    div {
+        background-color: pink;
+    }
+}
+    @media (min-width : 400px) and (max-width: 600px) {
+    div {
+        background-color: red;
+    }
+}
+@media (min-width : 600px) {
+    div {
+        background-color: blue;
+    }
+}*/
+div:hover {
+   /* background-color: aqua;
+    color: chartreuse;*/
+    /*font-size: 400px;*/
+    /*transform: scaleY(3);*/
+    /*transform: rotate(90deg);*/
+    /*transform: translate(200px, 300px);*/
+    transform: skew(45deg);
+    
+}
+div:active{
+    background-color: darksalmon;
+}

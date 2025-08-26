@@ -1,0 +1,25 @@
+.div{
+    height: 100px;
+    width: 100px;
+    color: red;
+    text-align: center;
+}
+.button{
+    background-color: blue;
+    text-align: center;
+}
+.h1{
+    text-align: center;
+    text-shadow: 0cm;
+    font-size: italic;
+    color:blue;
+    font-weight: bold;
+    border-style: dotted;
+}
+.paragraph{
+    text-align: center;
+    font-size: 14px;
+}
+.div{
+    border-radius: 50%;
+}

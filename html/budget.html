@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <style>
+        h1 {
+            text-align: left;
+            font-weight: bold;
+            font-size: 28px; 
+            margin: 10px 0;
+        }
+
+
+        table {
+            border-collapse: collapse; 
+            table-layout: auto;        
+            width: auto;               
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6px 10px;
+            text-align: left;
+            white-space: nowrap; 
+        }
+        th {
+            background: #f2f2f2;
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Personal Budget Tracker</h1>
+
+    <a href="#">Add Income/Expense"</a><br><br>
+    <a href="#">View Budget Summary</a>
+
+    <h2>Welcome to the Personal Budget Tracker</h2>
+
+    <p>This tracker helps you manage your monthly income and expenses. You can add new entities and view a detialed summary of your budget.</p>
+
+    <h3>Add New Income or Expense</h3>
+<form>
+   Amount: <input type="text" name="amount"><br><br>
+   Category:
+   <select>
+   <option>Select the category</option>
+   <option>Food</option>
+   <option>Transportation</option>
+   <option>Entertainment</option>
+   <option>Salary</option>
+   <option>Savings</option>
+   <option>Utilities</option>
+   <option>Utilities</option>
+   <option>Housing</option>
+   <option>Housing</option>
+</select>  <br><br>
+
+   Description:<input type="text" name="description"><br><br>
+
+   Date:<input type="date" name="date"><br><br>
+   type:<input type="radio" name="type" value="Income">Income
+   <input type="radio" name="type" value="Expenses">Expenses<br><br>
+
+   <button type="submit">Add Entry</button><br><br>
+</form>
+
+<table>
+   <caption><b>Budget Summary</b></caption>
+   <thead>
+    <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Transaction Details</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>food</td> 
+            <td>$200</td>
+            <td>Groceries for the week</td>
+            <td>Completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Transportations</td>
+            <td>$100</td>
+            <td>Monthly bus pass</td>
+            <td>Completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Entertainment</td>
+            <td>$50</td>
+            <td>Cinema Ticket</td>
+            <td>Completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>$3000</td>
+            <td>Monthly salary payment</td>
+            <td>completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Savings</td>
+            <td>$500</td>
+            <td>Emergency fund Deposit</td>
+            <td>Completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Utilities</td>
+            <td>$100</td>
+            <td>Electricity bill</td>
+            <td>Pending</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Utilities</td>
+            <td>$50</td>
+            <td>Water bill</td>
+            <td>completed</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Housing</td>
+            <td>$1200</td>
+            <td>Monthly rent</td>
+            <td>Completed</td>
+            <td><button>Edit</button><button>Delete</button></td>
+        </tr>
+        <tr>
+            <td>Housing</td>
+            <td>$100</td>
+            <td>Maintanance fee</td>
+            <td>Pending</td>
+            <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Personal Budget Tracker - Version 1.0</p>
+
+<footer>
+    <p>&copy 2025 personal Budget Tracker | Designed by Pathan | All rights reserved.</p>
+    <p>Contact: <a href="mailto:support@budgettracker.com">support@budgettracker.com</a></p>
+</footer>
+</body>
+</html>

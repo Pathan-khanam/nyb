@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+</head>
+<body>
+   <h2>Student Application Form</h2>
+   
+   <form action="Submit_application" method="post">
+
+        <legend>Personal Information</legend>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name="dob" required><br><br>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="#">--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+
+    <legend>Contract Details</legend>
+
+    <label for="email">Email</label>
+    <input typle="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="2" cols="30" required></textarea><br><br>
+    
+
+    
+        <legend>Academic</legend>
+
+     <label for="course">Course Applying For:</label>
+     <select id="course" name="course" value="fulltime" required>
+        <option value="#">--Select--</option>
+        <option value="btech">Btech</option>
+        <option value="mtech">Mtech</option>
+    </select><br><br>
+    
+    <label>Mode of Study</label>
+    <label for="fulltime">Full-Time</label>
+    <input type="radio" id="fulltime" name="mode" value="fulltime" required><br><br>
+
+    <label for="parttime">Part-Time</label>
+    <input type="radio" name="mode" id="parttime" value="parttime"><br><br>
+
+
+
+    <label for="marksheet">Upload Marksheet</label>
+    <input type="file" name="marksheet" id="marksheet" accept=".pdf,.jpg,.png" required><br><br>
+
+
+    <input type="checkbox" id="declare" name="declare" required>
+    <label for="declare">I hereby declare that the information provided is true to the best of my knowledge.</label><br><br>
+    
+
+     <input type="submit" value="Submit Apllication">
+     <input type="reset" value="Reset Form">
+
+
+   </form>
+</body>
+</html>

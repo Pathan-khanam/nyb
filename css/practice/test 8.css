@@ -1,0 +1,16 @@
+.loader{
+    height: 100px;
+    width: 100px;
+ border-radius: 50%;
+ border:solid 20px rgb(158, 8, 113);
+ border-top: 20px solid rgb(247, 77, 238) ;
+animation: spinanimate 1s steps(5) 0s infinite normal;
+
+
+}
+@keyframes spinanimate{
+    from{transform: rotate(0deg);
+}
+to{transform: rotate(360deg);
+}
+}
