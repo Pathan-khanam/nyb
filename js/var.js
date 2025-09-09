@@ -1,5 +1,5 @@
- var khan = "-19.09 $,!"
- var k = 10.98
- var  fullName= khan
-console.log(typeof k)
-console.log(typeof khan)
+
+var empId = ['khan',234,'hello',[56789028828]]
+empId.push('phno')
+empId.unshift('pathan')
+console.log(empId)
