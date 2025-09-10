@@ -88,3 +88,50 @@ greet()
 console.log(a+b)
 
 
+//redeclaration var allowed
+//var reinitialization allowed
+
+var a=30
+var b=50
+var a=10
+console.log(a,b)
+
+// let a=10
+// let b=30
+ a=5
+// const b=10;
+console.log(a)
+
+
+//reinitialization let allowed
+//let redeclaration not allowed
+
+let x=10
+x=19
+x=30
+var y=60
+y=80
+const k=30
+const p=13
+console.log(x,y,k)
+
+//let y=10
+y=20
+// const z=40
+console.log(y)
+
+//const redeclaration not allowed
+
+//const reinitialization also not allowed
+
+let l=70
+
+const h=80
+h=56
+console.log(h,l,a)
+
+// const w=10
+// w=9
+// console.log(w)
+
+
