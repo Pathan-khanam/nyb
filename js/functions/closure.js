@@ -46,3 +46,13 @@ const account =bankAccount()
 //console.log(account.deposit(500))
 //console.log(account.withdraw(200))
 console.log(account.checkBalance())
+
+//closure
+
+function A(a,b,c,d,e,g,f,k){
+    return function D(){
+
+    return a+b+c+d+e+g+f+k
+}
+}
+console.log(A(10,3,30,4,2,3,10,29)())
