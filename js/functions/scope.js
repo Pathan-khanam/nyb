@@ -127,8 +127,8 @@ console.log(y)
 let l=70
 
 const h=80
-h=56
-console.log(h,l,a)
+//h=56
+console.log(h,l)
 
 // const w=10
 // w=9
