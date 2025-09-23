@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compelte HTML project</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <header>
+    <!--header and navigation -->
+    <h1>My HTML portfolio project</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#Media">Media</a>
+        <a href="#Contact">Contact</a>
+
+    </nav>
+    </header>
+
+    <!--Main Section-->
+    <main>
+    <!--about-->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a web developer learning <strong>Html5</strong> and all its <em>elements</em>.</p>
+        <p>My skills include <abbr title="Cascading Style Sheet">Css</abbr> and  <abbr title="JavaScript">JS</abbr>.</p>
+        <blockquote cite="https://wwe.w3.org">
+            "The web is the platform." - W3C
+        </blockquote>
+        <p>Today is my revision of <strong>Html5</strong>.</p>
+        <p>Today is <time datetime="2025-09-23">September 23, 2025</time>.</p>
+    </section>
+    
+    <!--Portfolio section-->
+    <section id="portfolio">
+        <h2>Portfolio Projects</h2>
+
+        <!--Figure with caption // Groups an image with a caption.-->
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="Project Screenshot">
+            <figcaption>Project 1: Web Design</figcaption>
+        </figure>
+
+        <!--Table-->
+        <table>
+        <!--caption for table title or description-->
+        <caption>Project Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Portfolio Website</td>
+                <td>Web</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>To-do App</td>
+                <td>Web</td>
+                <td>In Progress</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">More projects coming soon!</td>
+            </tr>
+        </tfoot>
+        </table>
+
+        <!--Lists-->
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML5
+                <ul>
+                    <li>Forms</li>
+                    <li>Tables</li>
+                    <li>Media</li>
+                </ul>
+            </li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h3>Languages</h3>
+        <ol>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Telugu</li>
+        </ol>
+        <!--Abbreviation & Citations-->
+        <dl>
+            <dt>HTML</dt><dd>Hyper Text Markup Language</dd>
+            <dt>CSS</dt><dd>Cascading Style Sheet</dd>
+        </dl>
+    </section>
+    
+    <!--Multi-Media section-->
+
+    <section id="media">
+        <h2>Media Examples</h2>
+        <video width="320" height="240" controls>
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <audio controls>
+            <source src="sample.mp3" type="audio/mpeg">
+            your browser does not support the audio element'
+        </audio>
+        <iframe src="https://www.Example.com" width="300" height="150" title="Iframe Eaxmple"></iframe>
+        <canvas id="myCanvas" width="150" height="50" style="border: 1px solid #000000;"></canvas>
+    </section>
+    <!--interactive Elements-->
+    <section id="--interactive">
+        <h2>Interactive Elements</h2>
+        <details>
+            <summary>Click to see details</summary>
+            <p>This is inside a <code>&lt;details&gt;</code>element.</p>
+        </details>
+         <label>Progress:</label>
+        <progress value ="70", max="100"></progress>
+          <label>Meter:</label>
+          <meter value="0.6">60%</meter>
+        
+    </section> 
+
+    <!--Contact-->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name ">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea>
+
+            <label>
+                <input type="checkbox" name="subscribe" value="yes">Subscribe to Newsletter
+            </label>
+        </form>
+    </section>
+
+    <!--Article //with some text-->
+    <article>
+        <h3>Blog Article</h3>
+        <p>Tjis is an <article> tag example showing content that could be syndicated or standalone.</p>
+    </article>
+
+    <!--aside-->
+    <aside>
+        <h3>Aside Section</h3>
+        <p>Helpful links or ads go here.</p>
+    </aside>
+    </main>
+    <!--footer section-->
+    <footer>
+        <p>&copy; 2025 My Compelte HTML5 project</p>
+    </footer>
+
+
+</body>
+</html>
