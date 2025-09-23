@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="./tictactoe.css">
 </head>
 <body>
+    <div class="msg-container hide">
+        <p id="msg"> Winner</p>
+        <button id ="new-btn">New Game</button>    
+    </div>
 <main>
         <h1>Tic-Tac-Toe</h1>
+        <h4>GAME</h4>
     <div class="container">
         <div class="game">
            <button class="box"></button>
@@ -20,16 +25,18 @@
                  <button class="box"></button>
                   <button class="box"></button>
                    <button class="box"></button>
+                   <button class="win-line" id="winLine"></button>
         </div>
+       
     </div>
-    <button id="reset">Reset Game</button>
+     <h2 id="status">Turn:O</h2>
+    <button id="reset">Restart</button>
+
 </main>
-
-
-
-
-
-
-    <script src="./tictoctoe.js"></script>
+<div class ="board-container">
+    <div class ="board"></div>
+<canvas class = "line-canvas" id="confetti"></canvas>
+</div>
+    <script src="./tictactoe.js"></script>
 </body>
 </html>

@@ -12,7 +12,9 @@ body{
     height: 70vh;
      justify-content: center;
     align-items: center;
-    display:flex;
+    display: flex;
+    position:relative;
+
 
 }
 .game{
@@ -22,7 +24,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1vmin;
+    gap: 1.5vmin;
 
 }
 
@@ -34,8 +36,15 @@ body{
     box-shadow: 0 0 1rem rgba(0,0, 0 ,0.3);
     font-size: 8vmin;
     color: #b0513e;
+    text-shadow: #f8f891;
+
+    background-color: rgb(55, 182, 137);
+     box-shadow: 0 0 20px #C6AD9D, 0 0 40px rgb(240, 243, 51);
+     cursor: pointer;
 
 }
+
+
 #reset{
     padding : 1 rem;
     font-size: 1.2rem;
@@ -45,4 +54,163 @@ body{
     border: none;
     height: 5vmin;
    width: 20vmin;
+
+   cursor:pointer;
+   transition: 0.3s;
+   box-shadow: 0 0 10px rgb(243, 231, 69);
+   animation: glow 2.5s infinite alternate;
+
 }
+
+#reset:hover{
+    background: #841855;
+    box-shadow: 0 0 25px cyan, 0 0 50px greenyellow;
+}
+#new-btn{
+    padding : 1 rem;
+    font-size: 1.2rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    height: 5vmin;
+   width: 20vmin;
+}
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin ;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 5rem;
+
+}
+.hide{
+    display: none;
+}
+
+#status{
+    color:aquamarine;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 10px cyan, 0 0 20px greenyellow;
+  margin: 10px;
+  font-size: 24px;
+
+}
+@keyframes glow {
+    from {box-shadow:0 0 15px cyan, 0 0 25px greenyellow;}
+    to {box-shadow: 0 0 40px cyan,0  0 80px greenyellow}
+}
+/* #confetti{
+    position:absolute;
+    height: 6px;
+    width: 370px;
+    background: #C6AD9D;
+    box-shadow: 0 0 25px cyan, 0 0 50px greenyellow;
+    display: none;
+    transform-origin: left center;
+    border-radius: 5px;
+    animation: glow 1.5s infinite alternate;
+} */
+
+
+/* Radiance for X */
+.x {
+  color: #39ff14; /* Neon green */
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+}
+
+/* Radiance for O */
+.o {
+  color: #ff00ff; /* Neon pink */
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 10px, 0 0 20px;
+  }
+  100% {
+    text-shadow: 0 0 20px, 0 0 40px;
+  }
+}
+
+.x,
+.o {
+  animation: pulseGlow 1s infinite alternate;
+}
+.board-container {
+    position: relative;
+    width: fit-content;
+
+}
+.line-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+ .line {
+  display: none;
+  position: absolute;
+  height: 5px;
+  background: yellow;
+  box-shadow: 0 0 15px yellow;
+  z-index: 5;
+}
+
+   /* OVERLAY & CONFETTI */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,23,0.9);
+      display:none;
+      z-index:999;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:18px;
+    }
+    .overlay .card{
+      text-align:center;
+    }
+    .overlay h2{
+      margin:0;
+      font-size:32px;
+      text-shadow:0 0 20px rgba(250,204,21,0.8);
+    }
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* lets user still click buttons */
+  z-index: 20;
+}
+/* WIN LINE */
+    .win-line{
+      position:absolute;
+      left:0; top:0;
+      height:var(--line-thickness);
+      background:linear-gradient(90deg,#facc15,#f97316);
+      border-radius:6px;
+      box-shadow:0 0 18px rgba(250,204,21,0.85), 0 0 36px rgba(249,115,22,0.35);
+      transform-origin:0 50%; /* <-- pivot at left center so the start point stays fixed */
+      display:none;
+      pointer-events:none;
+    }
+
+    
+    .cell.winner{
+      box-shadow:0 0 28px rgba(250,204,21,0.25), inset 0 0 20px rgba(250,204,21,0.06);
+      transform:scale(1.08);
+    }
+
+

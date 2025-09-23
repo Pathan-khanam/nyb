@@ -1,0 +1,14 @@
+h1{
+    color: rgb(102, 255, 0);
+    background-color: blueviolet;
+}
+
+body {
+    background-color: pink;
+
+}
+button{
+    background-color: black;
+    color: beige;
+    border-radius: 25%;
+}
