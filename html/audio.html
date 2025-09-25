@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        your browser does not support audio 
+    </audio>
+
+
+    <audio id="myaudio">
+        <source src="https://soundcloud.com/free-royalty-free-music/free-suspense-music?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" type="audio/mpeg"></audio>
+        <button onclick="playAudio()"> Play Audio</button>
+</body>
+<script>
+    function playAudio () {
+        document.getElementById(myaudio).play();
+
+    }
+</script>
+</html>
