@@ -14,7 +14,7 @@ function setupCharacter(id){
     });
 
     char.addEventListener("click", () => {
-        message.textContent="🎂🥳🎁🎈🎉 HAPPY BIRTHDAY! 🎂🥳🎁🎈🎉";
+        message.textContent="🎂🥳🎁🎈🎉  HAPPY BIRTHDAY! 🎂🥳🎁🎈🎉";
         message.classList.add("show");
         setTimeout(() => message.classList.remove("show"),2000);
     });
@@ -55,3 +55,5 @@ if(bow && dress){
 
 setupCharacter("mickey");
 setupCharacter("minnie");
+
+
