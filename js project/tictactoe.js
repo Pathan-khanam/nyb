@@ -5,12 +5,9 @@ let msgContainer = document.querySelector('.msg-container');
 let msg = document.querySelector('#msg');
 let line = document.querySelector('.line');
 let statusText = document.querySelector('#status')
-let confetti =document.getElementsByClassName('.line-canvas')
-let winLine = document.getElementById('#winLine');
-
-
-    const clickSound = document.getElementById('clickSound');
-    const winSound = document.getElementById('winSound');
+let confetti =document.getElementsByClassName('line-canvas')
+let winLine = document.getElementById('winLine');
+let confettiAnimationFrame;
 
 
 let  board = document.querySelector(".board")
@@ -47,11 +44,11 @@ boxes.forEach((box) => {
         if (turnO) {
             box.classList.add("o");
             box.innerText = "O";
-            box.style.color = "#60435F";
+            box.style.color = "#663564ff";
         } else {
             box.classList.add("x");
             box.innerText = "X";
-            box.style.color = "#E74C3C"; // optional for X
+            box.style.color = "#448607ff"; // optional for X
         }
 
         box.disabled = true;
@@ -106,13 +103,8 @@ if( pos1val !="" && pos2val != "" && pos3val != ""){
     if(pos1val === pos2val && pos2val ===pos3val){
          drawLine(pattern, pos1val)
         console.log("winner", pos1val);
-    //     highlightWinner(winningcombo, current);
-    //      // play sound + show overlay after small delay
-    //   if (winSound) { try { winSound.currentTime=0; winSound.play(); } catch(e){} }
-        //setTimeout(()=> showOverlay(current), 700)
          setTimeout(() => {
          statusText.innerText=`${pos1val}` + "wins!🎉🎊";
-         
          showWinner(pos1val);
          launchconfetti();
          gameOver=true;
@@ -142,31 +134,37 @@ if( pos1val !="" && pos2val != "" && pos3val != ""){
     const cell1 = boxes[pattern[0]].getBoundingClientRect();
     const cell2 = boxes[pattern[2]].getBoundingClientRect();
 
-    const x1 = cell1.left + cell1.width / 2;
-    const y1 = cell1.top + cell1.height / 2;
-    const x2 = cell2.left + cell2.width / 2;
-    const y2 = cell2.top + cell2.height / 2;
+    const x1 = cell1.left + cell1.width / 2+window.scrollX;
+    const y1 = cell1.top + cell1.height / 2+ window.scrollY;
+    const x2 = cell2.left + cell2.width / 2 + window.scrollX;
+    const y2 = cell2.top + cell2.height / 2+ window.scrollY;
 
     const dx = x2 - x1;
     const dy = y2 - y1;
     const length = Math.sqrt(dx * dx + dy * dy);
+    const angle=Math.atan2(dy,dx)*180/Math.PI;
 
     // Set dimensions and position
     winLine.style.width = length + 'px';
     winLine.style.height = thickness + 'px';
     winLine.style.left = x1 + 'px';
     winLine.style.top = (y1 - thickness / 2) + 'px';
-
-    const angle = Math.atan2(dy, dx) * 180 / Math.PI;
     winLine.style.transform = `rotate(${angle}deg)`;
-
+    
     // 🎉 Glow effect based on winner
-    let glowColor = winner === 'O' ? '#00ffff' : '#ff00ff';
+    let glowColor = winner === 'O' ? '#fd8ccaff' : '#5eff00ff';
     winLine.style.backgroundColor = glowColor;
     winLine.style.boxShadow = `0 0 15px ${glowColor}, 0 0 30px ${glowColor}, 0 0 45px ${glowColor}`;
+winLine.classList.add('radiant-line');
 
     winLine.style.display = 'block';
-}
+
+
+setTimeout(()=> {
+    winLine.style.display='none';
+    winLine.classList.remove('radiant-line');
+},2500);
+ }
 
 
     function highlightWinner(combo, player) {
@@ -182,17 +180,22 @@ if( pos1val !="" && pos2val != "" && pos3val != ""){
 
 
 function reset(){
+    turnO= true;
+    gameOver=false;
+        statusText.innerText= "turn: O";
+          magcontainer.classList.add("hide");
+
     boxes.forEach(box => {
         box.innerText ="";
         box.style.color="white";
-    
+       box.disabled=false;
 
     });
     line.style.display="none";
-    gameOver= false;
-    turnO=true;
-    statusText.innerText= "turn: O";
+    winLine.classList.remove("radiant-line");
+    
 }
+
 
 let canvas = document.getElementById("confetti");
 let ctx = canvas.getContext("2d");
@@ -224,27 +227,41 @@ function animateConfetti() {
         c.y += c.speed;
         if (c.y > canvas.height) c.y = -10;
     });
-    requestAnimationFrame(animateConfetti);
+    confettiAnimationFrame=requestAnimationFrame(animateConfetti);
 }
+function stopConfetti() {
+  if (confettiAnimationFrame) {
+    cancelAnimationFrame(confettiAnimationFrame);
+    confettiAnimationFrame = null;
+  }
+  confettiParticles = [];
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+// clearTimeout(launchconfetti);
+setTimeout(stopConfetti, 2500); 
+
+}
+
 
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
 
 });
 
- newGameBtn.addEventListener("click", resetGame);
+newGameBtn.addEventListener("click", () => {
+    stopConfetti();
+    resetGame();
+});
 
- 
- resetbtn.addEventListener("click", resetGame);
+resetbtn.addEventListener("click", () => {
+    stopConfetti();
+    resetGame();
+});
 
 
+ //newGameBtn.addEventListener("click", resetGame);
 
-
-
-
-
+//resetbtn.addEventListener("click", resetGame);
 
 
 

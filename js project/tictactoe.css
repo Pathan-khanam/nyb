@@ -107,18 +107,6 @@ body{
     from {box-shadow:0 0 15px cyan, 0 0 25px greenyellow;}
     to {box-shadow: 0 0 40px cyan,0  0 80px greenyellow}
 }
-/* #confetti{
-    position:absolute;
-    height: 6px;
-    width: 370px;
-    background: #C6AD9D;
-    box-shadow: 0 0 25px cyan, 0 0 50px greenyellow;
-    display: none;
-    transform-origin: left center;
-    border-radius: 5px;
-    animation: glow 1.5s infinite alternate;
-} */
-
 
 /* Radiance for X */
 .x {
@@ -134,10 +122,13 @@ body{
 
 @keyframes pulseGlow {
   0% {
-    text-shadow: 0 0 10px, 0 0 20px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  }
+  50%{
+    box-shadow: 0 0 25px rgba(255,255,255,0.9),0 0 50px rgba(255,255,255,0.7);
   }
   100% {
-    text-shadow: 0 0 20px, 0 0 40px;
+    text-shadow: 0 0 10px, rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -194,23 +185,40 @@ body{
   pointer-events: none; /* lets user still click buttons */
   z-index: 20;
 }
-/* WIN LINE */
-    .win-line{
-      position:absolute;
-      left:0; top:0;
-      height:var(--line-thickness);
-      background:linear-gradient(90deg,#facc15,#f97316);
-      border-radius:6px;
-      box-shadow:0 0 18px rgba(250,204,21,0.85), 0 0 36px rgba(249,115,22,0.35);
-      transform-origin:0 50%; /* <-- pivot at left center so the start point stays fixed */
-      display:none;
-      pointer-events:none;
-    }
 
-    
-    .cell.winner{
+.win-line {
+   position: absolute;
+   height: 6px;
+   background-color: white;
+   border-radius: 5px;
+   pointer-events: none;
+   z-index: 10;
+   display: none;
+    box-shadow: 0 0 15px white, 0 0 30px white;    
+    transition: all 0.3s ease;
+}
+.cell.winner{
       box-shadow:0 0 28px rgba(250,204,21,0.25), inset 0 0 20px rgba(250,204,21,0.06);
       transform:scale(1.08);
-    }
+ }
+    
+.radiant-line{
+        animation: pulseGlow 1.5s ease-in-out infinite;
+ }
+ .board {
+    position:relative;
+  }
+    
+
+.win-line {
+  position: absolute;
+  height: 6px;
+  background-color: transparent;
+  display: none;
+  border-radius: 3px;
+  transform-origin: 0 50%;
+  transition: all 0.3s ease;
+}
+
 
 
