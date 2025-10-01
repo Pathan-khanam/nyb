@@ -41,18 +41,18 @@
 
 // multiple image silder
 
-let images = [
-   'https://imgcdn.stablediffusionweb.com/2024/12/19/71d08cda-b228-4683-a3c4-421a2f207432.jpg' ,
-    'https://i.pinimg.com/736x/b4/75/ab/b475ab2905ceed94642b82a50c173dee.jpg',
-    'https://i.pinimg.com/474x/d8/73/52/d87352d34c5ec61c336f4566a5ee526f.jpg'
-]
-let index=0;
+// let images = [
+//    'https://imgcdn.stablediffusionweb.com/2024/12/19/71d08cda-b228-4683-a3c4-421a2f207432.jpg' ,
+//     'https://i.pinimg.com/736x/b4/75/ab/b475ab2905ceed94642b82a50c173dee.jpg',
+//     'https://i.pinimg.com/474x/d8/73/52/d87352d34c5ec61c336f4566a5ee526f.jpg'
+// ]
+// let index=0;
 
-setInterval(() => {
-    document.getElementById("slider").src= images[index];
-    index= (index+1) % images.length;
+// setInterval(() => {
+//     document.getElementById("slider").src= images[index];
+//     index= (index+1) % images.length;
 
-},2000);
+// },2000);
 
 // let tst=0;
 // let hi=setInterval(() => {
@@ -69,3 +69,16 @@ setInterval(() => {
 // clearInterval(tst)
 // },6000);
 
+
+
+let post=0;
+let box= document.getElementById("box")
+
+    let intervalId= setInterval(() => {
+        if(post>=30){
+            clearInterval(intervalId);
+        } else{
+            post++;
+            box.stytle.left=post+ "px";
+        }
+    },10);
