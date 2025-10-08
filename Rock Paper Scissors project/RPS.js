@@ -24,8 +24,11 @@ choiceBtns.forEach((choiceBtns) => {
     choiceBtns.addEventListener("click",() => {
 console.log(choiceBtns);
 console.log(typeof choiceBtns);
-        choiceBtns.forEach(btn => {
-            btn.style.pointerEvents="none"
+        // choiceBtns.forEach((btn) => {
+        //     btn.style.pointerEvents="none"
+        // })
+        choiceBtns.forEach((txt)=>{
+            txt.style.pointerEvents="none"
         })
 
        gameTitle.textContent="Let's Play!"
@@ -56,7 +59,7 @@ console.log(typeof choiceBtns);
         }, 2000);
 
       
-       showResultGame()
+       showResultGame();
     })
 })
 

@@ -80,6 +80,8 @@ width: 2px;
 .options-choice{
     justify-content: space-between;
     display: flex;
+    /* flex-direction: row; */
+
     margin-top: 24px;
 
 }

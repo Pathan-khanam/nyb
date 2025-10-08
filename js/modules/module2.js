@@ -7,8 +7,8 @@ export function sendMsg() {
     return'Message sent!';
 }
 
-export  var a= 5;
+export  var x= 5;
 export var b= 10;
 export function multiply(){
-    return a*b;
+    return x*b;
 }

@@ -1,4 +1,34 @@
-//
+//syntax error
+// let name = "pathan"
+// console.log(name;
+let name="pathan";
+console.log(name);
+
+// //reference error
+// console.log(total)//not defined
+
+let total = 100;
+console.log(total)
+
+//type error
+// let num=5;
+//num()// trying to call a number like a function
+
+// let obj=null;
+// console.log(obj.name);//accessing property of null
+
+if(typeof num === "function") num();
+
+//Range error
+// let arr= new Array(-3);//-ive length
+
+let Arr = new Array(3);
+
+//Uri error
+//decodeURI("%")//invalid escape
+
+decodeURI("%20")//valid percent encoding
+
 
 //error handling : try...catch...finally
 try{

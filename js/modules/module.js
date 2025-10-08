@@ -18,6 +18,6 @@ function signUp(){
     console.log('signUp');
 
 }
-function login(){
-    console.log("login")
-}
+// function login(){
+//     console.log("login")
+// }
