@@ -27,10 +27,10 @@ console.log(typeof choiceBtns);
         // choiceBtns.forEach((btn) => {
         //     btn.style.pointerEvents="none"
         // })
-        choiceBtns.forEach((txt)=>{
-            txt.style.pointerEvents="none"
-        })
-
+        // choiceBtns.forEach((txt)=>{
+            // txt.style.pointerEvents="none"
+        // })
+            choiceBtns.style.pointerEvents="none"
        gameTitle.textContent="Let's Play!"
 
         playerChoiceText.textContent="✊"
@@ -53,9 +53,9 @@ console.log(typeof choiceBtns);
         
 
              showResultGame()
-             choiceBtns.forEach(btn => {
-            btn.style.pointerEvents="visible"
-        })
+        //      choiceBtns.forEach(btn => {
+            choiceBtns.style.pointerEvents="visible"
+        // })
         }, 2000);
 
       

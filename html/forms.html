@@ -33,7 +33,7 @@
     <legend>Contract Details</legend>
 
     <label for="email">Email</label>
-    <input typle="email" id="email" name="email" required><br><br>
+    <input typle="email" id="email" name="email"placeholder="Enter your name" required><br><br>
 
     <label for="phone">Phone Number</label>
     <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
@@ -47,7 +47,7 @@
 
      <label for="course">Course Applying For:</label>
      <select id="course" name="course" value="fulltime" required>
-        <option value="#">--Select--</option>
+        <datalist value="#">--Select--</datalist>
         <option value="btech">Btech</option>
         <option value="mtech">Mtech</option>
     </select><br><br>
@@ -70,7 +70,39 @@
     
 
      <input type="submit" value="Submit Apllication">
-     <input type="reset" value="Reset Form">
+     <input type="reset" value="Reset Form"><br><br>
+
+
+     <label for="number">Number</label>
+     <input type="number" min="2" max="10"><br><br>
+
+     <label for="pattern">pattern</label>
+     <input type="txt" pattern="[A-Za-z] {3,}"> <br><br>
+
+     <label for="id">Id</label>
+     <input type="txt" name="id" maxlength="10"><br><br>
+
+     <label for="readonly">Reading purpose only cannot edit</label>
+     <input type="txt" readonly>
+
+     <label for="disabled"> inactive</label>
+     <input type="txt" name="name" disabled><br><br>
+
+     <fieldset> 
+        <legend>contact info</legend>
+        <input type="txt" placeholder="name"><br><br>
+        <input type="txt" placeholder="Email"><br><br>
+        <input type="submit" value="Submit_application">
+
+    </fieldset>
+
+    <output name='result'>result</output>
+    <form autocomplete="on">
+
+        <label for="city">City:</label>
+        <input list="cities" name="city" id="city">
+        
+
 
 
    </form>
