@@ -1,0 +1,79 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+    perspective: 1000px;
+}
+.container{
+    position: relative;
+    top: 20%;
+    transform-style: preserve-3d ;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    position: absolute;
+    background: transparent;
+    width: calc(var(--i)* 2.5vmin);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border:3px solid rgb(0, 255,13);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) translateZ(50px);
+    animation: animate 3s ease-in-out calc(var(--i)*0.08s) infinite;
+    box-shadow: 0 0 15px rgb(124, 124,124);
+    inset: 0 0 15px rgb(124,124,124);
+}
+
+
+
+    /* Style for the first circle to look like a droplet */
+    .circle[data-drop="true"] {
+      width: 20px;
+      height: 30px;
+      background: radial-gradient(circle at 30% 30%, #0f0, #000 80%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      transform: rotateX(0) rotate(45deg);
+      border: none;
+      animation: dropFall 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 6px #0f0);
+    }
+
+
+        @keyframes dropFall {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(100px) rotate(45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+@keyframes animate{
+    0%,
+    100%{
+        transform: rotateX(70deg) translateZ(50px) translateY(0);
+        filter: hue-rotate(0);
+    }
+    50%{
+        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+        filter: hue-rotate(360deg);
+    }
+}

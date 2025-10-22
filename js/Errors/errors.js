@@ -30,6 +30,19 @@ let Arr = new Array(3);
 decodeURI("%20")//valid percent encoding
 
 
+//error handling: try...catch
+let person =new Error("Something went wrong");
+console.log(person.name);
+console.log(person.message);
+console.log(person.stack);
+
+try{
+    let x=y+10;
+}catch(error){
+    console.log("an error occurred:",error.message);
+}
+
+
 //error handling : try...catch...finally
 try{
     let a= b+1;
@@ -75,3 +88,22 @@ try{
     console.log(err.stack);
 }
 
+
+//option chaining
+//without option chaining
+// var user = {}
+// console.log(user.profile.name);//type error
+
+//with option chaining
+var emp ={}
+console.log(emp?.profile?.name);//undefined no error
+const user = {
+  name: "khan",
+  profile: {
+    email: "khanx@example.com"
+  }
+};
+
+// Without optional chaining (would throw an error if profile doesn't exist)
+console.log(emp.profile?.email); 
+console.log(emp.address?.city);

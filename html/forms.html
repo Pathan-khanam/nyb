@@ -32,10 +32,10 @@
 
     <legend>Contract Details</legend>
 
-    <label for="email">Email</label>
-    <input typle="email" id="email" name="email"placeholder="Enter your name" required><br><br>
+    <label for="email">Email:</label>
+    <input typle="email" id="email" name="email" placeholder="Enter your name" required><br><br>
 
-    <label for="phone">Phone Number</label>
+    <label for="phone">Phone Number:</label>
     <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
 
     <label for="address">Address:</label>
@@ -47,7 +47,7 @@
 
      <label for="course">Course Applying For:</label>
      <select id="course" name="course" value="fulltime" required>
-        <datalist value="#">--Select--</datalist>
+        <option value="#">--Select--</option>
         <option value="btech">Btech</option>
         <option value="mtech">Mtech</option>
     </select><br><br>
@@ -101,7 +101,20 @@
 
         <label for="city">City:</label>
         <input list="cities" name="city" id="city">
-        
+        <br><br>
+          <label>Menu:</label>
+        <select name="food">Food Items
+            <optgroup label="veg">
+                <option>paneer</option>
+                <option>alloo</option>
+            </optgroup>
+            <optgroup label="Non-veg">
+                <option>chicken</option>
+                <option>fish</option>
+            </optgroup>
+
+        </select>
+
 
 
 
