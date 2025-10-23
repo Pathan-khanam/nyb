@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--block level:- always starts on a new line,
+    takes up the fullwidth of its parent container,
+    can contain inline or other block level elements-->
+    <h1>Fruits</h1>
+    <h2>Strawberry</h2>
+    <h3>ice cream</h3>
+    <h4>chocolate</h4>
+<p>this is a block level paragraph</p>
+<div>this is a div (block-level)</div>
+<!--nested block elements-->
+<div>
+    <h3>inside a div(block-level)</h3>
+    <p>This paragraph is inside a div(block-level)</p>
+</div>
+<!--semantic block elements block level-->
+
+<header>This is a Header</header>
+<nav>this is a navigation</nav>
+<section>this is a section</section>
+<article>this is a article</article>
+<footer>this is a footer</footer>
+    <!--inline level:- doesn't start on a new line,
+    takes up only as much width as its content,
+    cann't contain block level elements inside -->
+    <p>this is a <span>span text</span>inside a paragraph.</p>
+    <a href="#">this is a link</a>
+    <em>this is a italic</em>
+    <strong>this is bold text</strong>
+
+    <!--inline images and links-->
+    <p>
+        visit<a href="https://google.com" target="_blank">&nbsp;&nbsp;Google</a>&nbsp;
+        <img src="./cute.jpg" width="20" height="20" alt="cute_girl">&nbsp;&nbsp;now!
+    </p>
+    <p>hello this is a <span>inline</span>.</p>
+    <p>this is strong<strong>inline text</strong>.</p>
+
+    <!--inline-block-->
+    <h2>inline-block</h2>
+    <div style="display: inline-block; width: 100px; height: 50px; background: coral; margin: 5px; justify-content: center; align-items: center; text-align: center; display:flex ; ">Box 1</div>
+    <div style="display: inline-block; width:100px; height: 50px; background: lightblue; margin: 5px; justify-content: center; align-items: center; text-align: center; display: flex; ">Box 2</div>
+    <div style="display: inline; width: 100px; height: 50px; background: lightgreen; margin: 5px;">Box 3</div>
+    <div style="display: block; width: 100px; height: 50px; background: pink; margin:5px;text-align: center; align-items: center; justify-content: center; display: flex;">Box 4</div> 
+</body>
+</html>
