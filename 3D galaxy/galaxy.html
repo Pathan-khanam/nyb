@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Galaxy</title>
+    <link rel="shortcut icon" href="./galaxy.png" type="image/x-icon">
+    <link rel="stylesheet" href="./galaxy.css">
+</head>
+<body>
+    <div id="container"></div>
+    <div class="'stats" id="stats">
+        <div>Systems:Active</div>
+        <div>Resonance:Stable</div>
+        <div>Phase:Nominal</div>
+    </div>
+    <div class="controls">
+        <button class="cntrl-bttn" id="reset-view">
+            <span></span><span></span><span></span><span></span><span>Reset View</span>
+        </button>
+        <button class="cntrl-bttn activate-bttn" id="activate-trigger">
+            <span></span><span></span><span></span><span></span><span>Activate Resonance</span>
+        </button>
+        <div>
+            <button class="cntrl-bttn" id="time-accel">
+                <span></span><span></span><span></span><span></span><span>Time: 1x</span>
+            </button>
+            <button class="cntrl-bttn" id="toggle-theme">
+            <span></span><span></span><span></span><span></span><span>Theme: Inferno</span>
+            </button>
+        </div>
+    </div>
+    <script src="./galaxy.js"></script>
+</body>
+</html>
