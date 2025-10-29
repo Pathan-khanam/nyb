@@ -36,7 +36,7 @@ function findMax(arr){
     }
     return max;
 }
-console.log(findMax([4,9,60,6,5,20]))
+console.log(findMax([4,932,60,6,5,240]))
 //find min without math.min
 function findMin(arr){
     if(arr.length===0){return "array is empty"}
@@ -48,7 +48,7 @@ function findMin(arr){
     }
     return min;
 }
-console.log(findMin([7,0,3,8,6,20]))
+console.log(findMin([7,0,33,8,26,20]))
 
 
 function arraySum(arr){
@@ -61,7 +61,7 @@ function arraySum(arr){
     }
     return sum;
 }
-console.log(arraySum([6,90,64,72,7,8]))
+console.log(arraySum([642,90,64,72,74,8]))
 
 //arrayavg(arr) returns avg of numbers round the result using math.round( )and return0 for empty array
 function arrayavg(arr){

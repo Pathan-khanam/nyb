@@ -101,13 +101,4 @@ checkNumbers.forEach(num => {
 
 var numbers = ["pathan", "khan", 15, 20];
 
-// Check multiple values
-var checkNum = ["pathan", "hi"];
 
-// checkNumbers.forEach(num => {
-//   if (numbers.includes(num)) {
-//     console.log(`${num} is in the array`);
-//   } else {
-//     console.log(`${num} is not in the array`);
-//   }
-// });

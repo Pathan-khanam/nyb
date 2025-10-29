@@ -24,7 +24,8 @@ function calculateGrade(marks){
             "Fails";
 }
 console.log(calculateGrade(95));
-console.log(calculateGrade(45))
+console.log(calculateGrade(45));
+console.log()
 
 
 
