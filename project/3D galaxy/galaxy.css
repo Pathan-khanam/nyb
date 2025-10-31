@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@300;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 body {
   margin: 0;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Orbitron","Inter", sans-serif;
   background: radial-gradient(circle at center, #0a0f1a 0%, #020408 100%);
   /* color: #00fff0;
   display: flex;
@@ -28,13 +30,35 @@ left: 0;
 
 /* ====== STATS PANEL ====== */
 .stats {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  color: #00fff0;
-  font-weight: bold;
-  text-shadow: 0 0 10px #00fff0;
+ 
+  color:rgba(255,255,255,0.7);
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 5;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  line-height: 1.6;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px) saturate(150%);
+  padding:10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255,255,0.06);
+  box-shadow: 
+             0 8px 32px rgba(0, 0, 0 ,0.12),
+             inset 0 1px 0 rgba(255,255,255,0.08);
+
+}
+.stats div{
+  margin-bottom: 4px;
+  padding: 2px;
+}
+.stats div:last-child{
+  margin-bottom: 0;
+
 }
 
 /* ====== CONTROLS ====== */
@@ -103,6 +127,34 @@ left: 0;
                 inset 0 2px 4px rgba(0,0,0,0.1),
                 inset 0 1px 0 rgba(255,255,255,0.15)
 }
+.controls::before{
+  content:"";
+  position: absolute;
+  top:-1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(
+    45deg,
+    rgba(255,255,255,0.05) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(255,255,255,0.05)100%
+
+  );
+  border-radius: 21px;
+  z-index: -1;
+  opacity: 0.5;
+}
+.cntrl-bttn:active{
+  background: rgba(255,255,255,0.15);
+  transform: translateY(0);
+  box-shadow:
+            0 8px 32px rgba(0,0,0,0.12),
+            0 1px 2px rgba(0,0,0,0.24),
+            inset 0 2px 4px rgba(0,0,0,0.1),
+            inset 0 1px 0 rgba(255,255,255,0.15);
+}
 
 .cntrl-bttn > span:last-of-type {
   position: relative;
@@ -115,7 +167,6 @@ left: 0;
                0 0 15px rgba(128,200,255,0.9)
                0 ;
 }
-
 
 .cntrl-bttn >span:nth-child(1) {
   top: 0;
@@ -211,12 +262,25 @@ left: 0;
   background: linear-gradient(90deg, transparent, #ff006a);
 }
 .activate-bttn>span:not(:last-of-type){
-    box-shadow: inset;
-
+    box-shadow: 0 0 15px rgba(255,120,120,0.9),
+                 0 0 30px rgba(255,120,120,0.7);
+}
+.activate-bttn>span:nth-child(1){
+  background: linear-gradient(90deg,transparent,rgba(255,120,120,1));
+}
+.activate-bttn>span:nth-child(2){
+  background: linear-gradient(180deg,transparent,rgb(255,120,120,1));
+}
+.activate-bttn>span:nth-child(3){
+  background: linear-gradient(270deg,transparent,rgba(255,120,120,1));
+}
+.activate-bttn>span:nth-child(4){
+  background: linear-gradient(0deg,transparent,rgba(255,120,120,1));
 }
 
+
 /* ====== THEMES ====== */
-body.theme-inferno {
+/* body.theme-inferno {
   background: radial-gradient(circle, #1a0000, #000);
   color: #ff6f00;
 }
@@ -230,4 +294,26 @@ body.theme-inferno #container {
 body.theme-inferno .stats {
   color: #ff6f00;
   text-shadow: 0 0 10px #ff6f00;
+} */
+ 
+
+@media(max-width:640px){
+  .controls{
+    gap:8px;
+    bottom: 15px;
+    left:15px;
+    right: 15px;
+    transform: translateX(0);
+    width: auto;
+  }
+  .cntrl-bttn{
+    padding:8px 12px;
+    font-size: 11px;
+    flex-grow: 1;
+  }
+  .stats{
+    top: 15px;
+    right: 15px;
+    padding:8px 12px
+  }
 }

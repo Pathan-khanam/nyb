@@ -33,3 +33,49 @@ let bignum=34565876897798789678587478587687n; //bigint
 console.log(typeof bignum)
 
 console.log(bignum)
+let age = 25; // integer
+let pi = 3.14159; // float
+let bigNum = 9007199254740991n; // BigInt for huge numbers
+
+console.log(typeof age); // "number"
+console.log(typeof bigNum); // "bigint"
+
+let planetName = "Earth";
+let greeting = `Hello, welcome to ${planetName}!`; // template literal
+
+console.log(planetName.length); // 5
+console.log(greeting.toUpperCase()); // "HELLO, WELCOME TO EARTH!"
+
+let isAlive = true;
+let hasAtmosphere = false;
+
+console.log(isAlive && hasAtmosphere); // false
+console.log(isAlive || hasAtmosphere); // true
+
+let emptyValue = null;
+let notAssigned;
+
+console.log(emptyValue); // null
+console.log(notAssigned); // undefined
+
+console.log(typeof emptyValue); // "object" (quirk in JS)
+console.log(typeof notAssigned); // "undefined"
+
+let starID1 = Symbol("star");
+let starID2 = Symbol("star");
+
+console.log(starID1 === starID2); // false
+
+let universe = {
+  galaxies: [
+    { name: "Milky Way", stars: 100_000_000_000 },
+    { name: "Andromeda", stars: 1_000_000_000_000 }
+  ],
+  hasDarkMatter: true,
+  age: 13.8e9 // billion years
+};
+
+console.log(universe.galaxies[0].name); // "Milky Way"
+let planet = {};
+console.log(planet.mass); // undefined (property doesn’t exist)
+console.log(planet.hasOwnProperty("mass")); // false
