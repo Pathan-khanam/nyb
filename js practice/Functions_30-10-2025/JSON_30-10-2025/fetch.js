@@ -62,9 +62,7 @@ async function fetchData() {
         // Highlight the character name
         nameDisplayElement.textContent = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1); // Capitalize the first letter
         nameDisplayElement.classList.add("highlighted");
-       
-        //clear the input's placeholder after search
-
+    
       } catch (error) {
         errorElement.textContent = error.message;
       }
