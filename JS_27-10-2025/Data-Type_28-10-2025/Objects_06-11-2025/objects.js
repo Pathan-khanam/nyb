@@ -44,3 +44,4 @@ console.log(emp.posts[0].title)
 emp.posts.forEach(post=>{
     console.log(post.title,"-",post.likes)
 })
+
