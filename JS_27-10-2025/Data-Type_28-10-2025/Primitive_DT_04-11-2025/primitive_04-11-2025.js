@@ -66,9 +66,9 @@ function typeOf(value) {
   return typeof value;
 }
 
-// Examples:
-console.log(typeOf(null));        // "null"
-console.log(typeOf(123));         // "number"
-console.log(typeOf("hello"));     // "string"
-console.log(typeOf(undefined));   // "undefined"
-console.log(typeOf({}));          // "object"
+
+console.log(typeOf(null));       
+console.log(typeOf(123));        
+console.log(typeOf("hello"));     
+console.log(typeOf(undefined));  
+console.log(typeOf({}));          

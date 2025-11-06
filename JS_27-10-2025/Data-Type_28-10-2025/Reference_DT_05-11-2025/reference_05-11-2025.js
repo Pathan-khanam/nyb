@@ -18,13 +18,14 @@ let obj={
        a:[56,10,20,30,40]
     }
 }
-console.log(obj)
+console.log(obj,typeof obj)
 var a={}
 
 //arrays
 var arr=[1,2,3,3,4,5,"hi","hello",true,false,null,[12,34,17,[20]],80]
-
-console.log(arr)
+var hi=[1627,67,9,0,36]
+console.log(hi,typeof hi)
+console.log(arr,typeof arr)
 
 //functions
 function greet(){
@@ -33,12 +34,19 @@ function greet(){
 }
 greet()
 console.log(greet())
-
+console.log(typeof greet)
 //calculate of salary based on number of working days
 console.log(4000*20)
 console.log(4000*19)
 console.log(4000*21)
 
-function salary(){
-    var day=4000
+function salary(name,days){//parameters
+    var perday=4000
+    console.log("Monthly salary of ",name,"is",perday*days)
+    return perday*days
 }
+salary("khan",20)//arguments
+console.log(salary("pathan",21))
+
+console.log("All the salaries are calculated")
+
