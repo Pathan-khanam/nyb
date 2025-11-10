@@ -1,5 +1,5 @@
 let map = new Map();
-map.set('name', 'Alice');
+map.set('name', 'sara');
 map.set('age', 25);
 map.set(true, 'boolean key');
 
@@ -94,3 +94,40 @@ for (let [fruit, price] of prices) {
   console.log(`${fruit}: ₹${price}`);
 }
 
+let pattern = /\d+/;   // one or more digits
+console.log(pattern.test("123")); // true
+
+let nonDigit = /\D+/;  // one or more non-digits
+console.log(nonDigit.test("abc")); // true
+
+let text = "Hello World JS";
+let result = text.replace(/\s/g, "-");
+console.log(result); // Hello-World-JS
+
+let strongPassword = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+console.log(strongPassword.test("Pass@123")); // true
+console.log(strongPassword.test("pass123"));  // false
+
+
+let date = new Date(2025, 10, 10, 10, 30, 0); // Month is 0-indexed (10 = November)
+console.log(date);
+
+let specificDate = new Date("2025-11-10T10:30:00");
+console.log(specificDate); // Mon Nov 10 2025 10:30:00
+
+let today = new Date();
+
+console.log(today.getFullYear()); // 2025
+console.log(today.getMonth());    // 10 (November — months start from 0)
+console.log(today.getDate());     // 10 (day of month)
+console.log(today.getDay());      // 1 (Monday — Sunday=0)
+console.log(today.getHours());    // 14
+console.log(today.getMinutes());  // 30
+console.log(today.getSeconds());  // 45
+
+let date1 = new Date("2025-11-10");
+let date2 = new Date("2025-11-15");
+
+if (date1 < date2) {
+  console.log("date1 comes before date2");
+}
