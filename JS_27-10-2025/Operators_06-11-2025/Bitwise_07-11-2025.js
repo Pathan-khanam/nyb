@@ -90,26 +90,6 @@ console.log(checkNumber(-3));  // Negative
 console.log(checkNumber(0));   // Zero
 
 
-// string concatination
-var firstName = "pathan";
-var lastName = "khan";
 
-var fullName = firstName + " " + lastName;
-console.log(fullName);
 
-var ag = 10;
-var msg = "I am " + ag + " years old.";
-console.log(msg);
-
-//template literal
-var name = "khan";
-var Age = 30;
-
-let sentence = `My name is ${name} and I am ${Age} years old.`;
-console.log(sentence);
-
-let x = 5;
-let y = 10;
-
-console.log(`The sum of ${x} and ${y} is ${x + y}.`);
 
