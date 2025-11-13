@@ -7,10 +7,12 @@ body{
 }
 h1{
     background: linear-gradient(90deg,blue,indigo,violet,red,#99FF33,#CC33FF,#FF66CC);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;/* for Chrome, Safari */
+     background-clip: text; /* standard syntax */
     color:transparent;
     margin-top: 20px;
 }
+
 #galaxy{
     position: relative;
     width: 100%;

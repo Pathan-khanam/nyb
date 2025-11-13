@@ -1,0 +1,105 @@
+body{
+    font-family: 'Poppins',sans-serif;
+    background: linear-gradient(to right,#89f7fe,#66a6ff);
+    text-align: center;
+    color: #222;
+    padding-top: 50px;
+    transition: background 1s ease-in-out;
+    overflow: hidden;
+
+}
+.container{
+    background:white;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0,0, 0, 0.3);
+    width: 320px;
+    transition: all 0.3s ease-in-out;
+}
+select,button{
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+button{
+    background-color:#ff5f6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s,transform 0.2s;
+}
+
+button:hover{
+    background-color: #ff2e63;
+    transform: scale(1.05);
+
+}
+img{
+    width: 100px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0,0 ,0 .3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+
+}
+img.show{
+    opacity: 1;
+    transform: translateY(0);
+    animation: float 2s ease-in-out infinite;
+}
+/*blushing glow*/
+.blush{
+    box-shadow: 0 0 25px rgba(255,105,180,0.6),
+                inset 0 0 25px rgba(255,182,193,0.4);
+
+}
+@keyframes float{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+/*animated gradient background*/
+@keyframes gradientMove{
+    0%{
+        background-position: 0% 50%;
+     }
+50% {
+    background-position: 100% 50%;
+    }
+100%{
+    background-position: 0% 50%;
+}    
+}
+.bg-animate{
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+
+#msg{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+#quote{
+    margin-top: 10px;
+    font-size: 15px;
+    font-style: italic;
+    color: #444;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+#quote.show{
+    opacity: 1;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Mood Chooser</title>
+    <link rel="stylesheet" href="./cartoon.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🎭Cartoon Mood Chooser</h2>
+            <p>Select your mood to see your animated cartoon buddy!</p>
+
+            <select id="moodSelect">
+                <option value="">-- Select Mood --</option>
+                <option value="happy">😄Happy</option>
+                <option value="smile">😊Smile</option>
+                <option value="sad">😢Sad</option>
+                <option value="angry">😡Angry</option>
+                <option value="sleepy">😴Sleepy</option>
+                <option value="excited">🤩Excited</option>
+                <option value="confident">😎Confident</option>
+            </select>
+            
+            <button onclick="showCartoon()">Show Cartoon</button>
+
+            <div id="msg"></div>
+            <div id="quote"></div> 
+            <img id="cartoonImage" src="" alt="">
+    </div>
+
+    <script src="./cartoon.js"></script>
+</body>
+</html>
