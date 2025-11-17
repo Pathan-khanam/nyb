@@ -1,0 +1,82 @@
+body{
+    font-family: 'Poppiins',sans-serif;
+
+    background: radial-gradient(circle at top left,#8e2de2,#4a00e0,#ff6ec4,#00c6ff);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    transition: background 0.5s;
+
+}
+@keyframes gradientShift {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+h1{
+    color: #ffda79;
+    text-shadow: 0 0 10px #ffda79;
+
+}
+.box{
+    background: rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+input{
+    width: 240px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    /* background: rgba(255,255,255,0.1);
+    color: #fff;*/
+} 
+input::placeholder{
+    color: #ccc;
+
+}
+button{
+    margin-top: 10px;
+    background: #00b894;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    /* font-weight: bold;
+    transition: 0.3s; */
+
+}
+button:hover{
+    background: #019875;
+    /* color: #fff; */
+
+}
+.result{
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+   /* transition: 0.3s;
+     box-shadow: 0 0 10px rgba(0,0, 0, 0.3); */
+}
+.truthy{
+    background: #27ae60;
+    color: #fff;
+    /* box-shadow: 0 0 15px #1affd5; */
+}
+.fasly{
+    background: #c0392b;
+    color: #fff;
+}

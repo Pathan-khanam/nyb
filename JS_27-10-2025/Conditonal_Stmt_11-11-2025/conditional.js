@@ -81,3 +81,11 @@ if (isLoggedIn) {
 } else {
   console.log("❌ You must log in to continue.");
 }
+
+
+let cartTotal=12000
+
+if(cartTotal>= 10000){
+    console.log("You have qualified for free shipping")
+}
+
