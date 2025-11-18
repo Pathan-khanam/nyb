@@ -22,7 +22,7 @@ console.log(a)
 //const:-hoisted but not initialized(TDZ)
 //console.log(m)//ReferenceError m is not defined
 const value ="khan"
-console.log(id)
+console.log(value)
 
 
 //var-redeclaration allowed in the same scope
@@ -38,3 +38,6 @@ y=5
 console.log(y)//overwrites
 
 //let-declaration not allowed(in the same scope)
+
+
+
