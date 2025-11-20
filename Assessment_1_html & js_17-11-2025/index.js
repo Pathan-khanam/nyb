@@ -62,6 +62,7 @@ function reverse(str){
  let original="hello world"
  let reversed =reverse (original)
  console.log(reversed)
+ 
 
  function oddnum(arr){
     return arr.filter(hi=> hi%2 !==0)
