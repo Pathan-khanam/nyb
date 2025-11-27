@@ -1,0 +1,96 @@
+
+body {
+    margin: 0;
+    background: #87CEEB; /* Sky */
+}
+
+/* Road */
+.road {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 250px;
+    background: #333;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    overflow: hidden;
+}
+
+/* Lanes */
+.lane {
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    margin: 50px 0;
+}
+
+/* Vehicles */
+.vehicle {
+    position: absolute;
+    left: -120px;
+    border-radius: 6px;
+}
+
+/* Car */
+.car {
+    width: 90px;
+    height: 45px;
+    background: red;
+    top: 40px;
+}
+
+/* Bike */
+.bike {
+    width: 40px;
+    height: 20px;
+    background: blue;
+    top: 100px;
+}
+
+/* Auto */
+.auto {
+    width: 60px;
+    height: 30px;
+    background: yellow;
+    top: 160px;
+}
+
+/* Traffic Signal */
+.traffic-signal {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+/* Signal Box */
+.signal-box {
+    width: 60px;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+/* Lights */
+.light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #555;
+    margin: 10px auto;
+    box-shadow: 0 0 5px #000;
+}
+
+.red.active { background: red; box-shadow: 0 0 25px red; }
+.yellow.active { background: yellow; box-shadow: 0 0 25px yellow; }
+.green.active { background: lime; box-shadow: 0 0 25px lime; }
+
+/* Pole */
+.pole {
+    width: 15px;
+    height: 200px;
+    background: #222;
+    margin: 0 auto;
+}

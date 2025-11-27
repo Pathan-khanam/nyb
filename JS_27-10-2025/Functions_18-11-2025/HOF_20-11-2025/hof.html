@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; }
+    button { padding: 8px 12px; }
+    li { margin: 6px 0; }
+  </style>
 </head>
 <body>
+     <h2>To-Do List</h2>
+
+  <input id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add</button>
+
+  <ul id="taskList"></ul>
+
     <script src="./hof.js"></script>
 </body>
 </html>

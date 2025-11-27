@@ -24,3 +24,17 @@ var greet = name => `hello ${name}, have a nice day`
 var emojigreet=emoji(greet)
 
 console.log(emojigreet("khan"))
+
+//21-11-2025
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const text = input.value.trim();
+
+  if (!text) return;
+
+  const li = document.createElement("li");
+  li.innerHTML = `${text} <button onclick="this.parentNode.remove()">Delete</button>`;
+  
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+}

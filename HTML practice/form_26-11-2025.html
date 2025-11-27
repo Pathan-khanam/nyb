@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="container">
+        <h1>Student Registration Form</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required> Male
+                <input type="radio" id="female" name="gender" value="female" required> Female
+            </div><br>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                </select><br>
+            </div>
+
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+        <div id="resultMessage"></div>
+    </div>
+
+
+    <caption>Student Table</caption>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>21</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>22</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Emma Brown</td>
+            <td>20</td>
+            <td>Physics</td>
+        </tr>
+    </tbody>
+</table>
+
+<header>
+  <h1>Welcome to My Website</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2>About Our Company</h2>
+  <p>We are a leading provider of web development services...</p>
+</main>
+
+<section>
+  <h2>Our Services</h2>
+  <p>We provide a variety of web development services...</p>
+</section>
+
+<article>
+  <h2>How to Build a Website</h2>
+  <p>Building a website from scratch is easier than you think...</p>
+</article>
+
+<footer>
+  <p>&copy; 2025 My Website. All rights reserved.</p>
+</footer>
+
+<figure>
+  <img src="./sunset.jpg" alt="A beautiful sunset" width="500px" height="500px">
+  <figcaption>A beautiful sunset at the beach</figcaption>
+</figure>
+
+<p>The <mark>HTML</mark> `<mark>` tag is used to highlight text.</p>
+
+    <details>
+  <summary>More Information</summary>
+  <p>This section contains additional details.</p>
+</details>
+
+<time datetime="2025-12-31">December 31, 2025</time>
+
+<progress value="70" max="100">70%</progress>
+<address>
+  <p>Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
+</address>
+
+
+<video src="./fishes.mp4" width="640" height="360" controls>
+  Your browser does not support the video tag.
+</video><br><br>
+
+ <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        your browser does not support audio 
+    </audio>
+
+    <audio controls>
+        <source src="c:\Users\Nafisa Khanam\Downloads\Saiyaara.mp3" type="audio/mpeg"></audio>
+    
+
+
+    <script src="./form.js"></script>
+</body>
+</html>
