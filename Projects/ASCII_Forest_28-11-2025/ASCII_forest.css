@@ -1,0 +1,86 @@
+ body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to top, #556B2F 60%, #87CEEB 100%);
+  }
+
+  #forest {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Trees */
+  .tree {
+    width: 40px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 10px;
+  }
+
+  /* Humans */
+  .human {
+    position: absolute;
+    bottom: 50px;
+    width: 20px;
+    height: 50px;
+    background: brown;
+    border-radius: 5px;
+  }
+
+  /* Structured animals */
+  .animal {
+    position: absolute;
+    bottom: 50px;
+    width: 30px;
+    height: 25px;
+  }
+  .animal .body {
+    width: 30px;
+    height: 15px;
+    background: orange;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .animal .head {
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 25px;
+  }
+  .animal .leg {
+    width: 5px;
+    height: 10px;
+    background: orange;
+    position: absolute;
+    bottom: 0;
+  }
+  .animal .leg1 { left: 2px; }
+  .animal .leg2 { left: 8px; }
+  .animal .leg3 { left: 18px; }
+  .animal .leg4 { left: 24px; }
+
+  /* Birds */
+  .bird {
+    width: 15px;
+    height: 15px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  /* Rain */
+  .raindrop {
+    width: 2px;
+    height: 10px;
+    background: #00BFFF;
+    position: absolute;
+    top: 0;
+  }

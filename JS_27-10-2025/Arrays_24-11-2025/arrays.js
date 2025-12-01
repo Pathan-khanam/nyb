@@ -121,3 +121,7 @@ console.log(c);
 
 num.reverse();
 console.log(num);
+
+
+
+

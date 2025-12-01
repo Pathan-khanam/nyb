@@ -1,0 +1,259 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ASCII_forest.css">
+</head>
+<body>
+ <div id="forest">
+    <div class="animal" id="deer1">
+  <div class="body"></div>
+  <div class="head"></div>
+  <div class="leg leg1"></div>
+  <div class="leg leg2"></div>
+  <div class="leg leg3"></div>
+  <div class="leg leg4"></div>
+</div>
+
+ </div>
+
+    <script src="./ASCII_forest.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forest Life Simulator - Smooth Movement</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to top, #556B2F 60%, #87CEEB 100%);
+}
+#forest {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Trees */
+.tree {
+  width: 40px;
+  height: 100px;
+  background: green;
+  position: absolute;
+  bottom: 50px;
+  border-radius: 10px;
+}
+
+/* Humans */
+.human {
+  position: absolute;
+  bottom: 50px;
+  width: 20px;
+  height: 50px;
+}
+.human .head {
+  width: 12px;
+  height: 12px;
+  background: #f5c6a5;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.human .body {
+  width: 12px;
+  height: 30px;
+  background: #8B4513;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+}
+.human .leg {
+  width: 4px;
+  height: 12px;
+  background: #8B4513;
+  position: absolute;
+  bottom: 0;
+}
+.human .leg1 { left: 2px; }
+.human .leg2 { left: 10px; }
+
+/* Animals */
+.animal {
+  position: absolute;
+  bottom: 50px;
+  width: 40px;
+  height: 30px;
+}
+/* Deer */
+.deer .body { width: 40px; height: 15px; background: sienna; border-radius: 10px; position: absolute; top: 10px; }
+.deer .head { width: 12px; height: 12px; background: sienna; border-radius: 50%; position: absolute; top: 0; left: 28px; }
+.deer .leg { width: 5px; height: 10px; background: sienna; position: absolute; bottom: 0; }
+.deer .leg1 { left: 2px; }
+.deer .leg2 { left: 10px; }
+.deer .leg3 { left: 22px; }
+.deer .leg4 { left: 32px; }
+
+/* Rabbit */
+.rabbit .body { width: 25px; height: 12px; background: gray; border-radius: 10px; position: absolute; top: 10px; }
+.rabbit .head { width: 10px; height: 10px; background: gray; border-radius: 50%; position: absolute; top: 0; left: 18px; }
+.rabbit .leg { width: 3px; height: 8px; background: gray; position: absolute; bottom: 0; }
+.rabbit .leg1 { left: 2px; }
+.rabbit .leg2 { left: 7px; }
+.rabbit .leg3 { left: 15px; }
+.rabbit .leg4 { left: 20px; }
+
+/* Wolf */
+.wolf .body { width: 35px; height: 15px; background: darkgray; border-radius: 10px; position: absolute; top: 10px; }
+.wolf .head { width: 12px; height: 12px; background: darkgray; border-radius: 50%; position: absolute; top: 0; left: 23px; }
+.wolf .leg { width: 5px; height: 10px; background: darkgray; position: absolute; bottom: 0; }
+.wolf .leg1 { left: 2px; }
+.wolf .leg2 { left: 10px; }
+.wolf .leg3 { left: 20px; }
+.wolf .leg4 { left: 28px; }
+
+/* Birds */
+.bird { position: absolute; width: 20px; height: 20px; }
+.bird .body { width: 12px; height: 8px; background: black; border-radius: 50% / 50%; position: absolute; top: 6px; left: 4px; }
+.bird .head { width: 6px; height: 6px; background: black; border-radius: 50%; position: absolute; top: 2px; left: 0; }
+.bird .wing { width: 8px; height: 4px; background: black; position: absolute; top: 6px; transform-origin: left center; }
+.bird .wing.left { left: 2px; }
+.bird .wing.right { left: 6px; transform-origin: right center; }
+.bird .tail { width: 6px; height: 3px; background: black; position: absolute; bottom: 2px; left: 12px; transform: rotate(30deg); }
+
+/* Rain */
+.raindrop { width: 2px; height: 10px; background: #00BFFF; position: absolute; top: 0; }
+
+</style>
+</head>
+<body>
+<div id="forest"></div>
+<script>
+const forest = document.getElementById('forest');
+const forestWidth = window.innerWidth;
+const forestHeight = window.innerHeight;
+
+// Trees
+for(let i=0; i<15; i++){
+  const tree = document.createElement('div');
+  tree.className = 'tree';
+  tree.style.left = Math.random() * forestWidth + 'px';
+  forest.appendChild(tree);
+}
+
+// Humans
+const humans = [];
+for(let i=0; i<3; i++){
+  const human = document.createElement('div'); human.className = 'human';
+  const head = document.createElement('div'); head.className = 'head';
+  const body = document.createElement('div'); body.className = 'body';
+  const leg1 = document.createElement('div'); leg1.className = 'leg leg1';
+  const leg2 = document.createElement('div'); leg2.className = 'leg leg2';
+  human.appendChild(head); human.appendChild(body); human.appendChild(leg1); human.appendChild(leg2);
+  human.style.left = Math.random() * forestWidth + 'px';
+  forest.appendChild(human);
+  humans.push({el: human, speed: 1 + Math.random()*1.5});
+}
+
+// Function to create structured animals
+function createAnimal(type){
+  const animal = document.createElement('div'); animal.className = 'animal ' + type;
+  const body = document.createElement('div'); body.className = 'body';
+  const head = document.createElement('div'); head.className = 'head';
+  const leg1 = document.createElement('div'); leg1.className = 'leg leg1';
+  const leg2 = document.createElement('div'); leg2.className = 'leg leg2';
+  const leg3 = document.createElement('div'); leg3.className = 'leg leg3';
+  const leg4 = document.createElement('div'); leg4.className = 'leg leg4';
+  animal.appendChild(body); animal.appendChild(head); 
+  animal.appendChild(leg1); animal.appendChild(leg2); animal.appendChild(leg3); animal.appendChild(leg4);
+  animal.style.left = Math.random() * forestWidth + 'px';
+  forest.appendChild(animal);
+  return {el: animal, speed: 1 + Math.random()*2, dir: Math.random()>0.5?1:-1};
+}
+
+// Animals
+const animals = [createAnimal('deer'), createAnimal('rabbit'), createAnimal('wolf')];
+
+// Birds
+const birds = [];
+for(let i=0; i<4; i++){
+  const bird = document.createElement('div'); bird.className = 'bird';
+  const body = document.createElement('div'); body.className = 'body';
+  const head = document.createElement('div'); head.className = 'head';
+  const wingLeft = document.createElement('div'); wingLeft.className = 'wing left';
+  const wingRight = document.createElement('div'); wingRight.className = 'wing right';
+  const tail = document.createElement('div'); tail.className = 'tail';
+  bird.appendChild(body); bird.appendChild(head); bird.appendChild(wingLeft); bird.appendChild(wingRight); bird.appendChild(tail);
+  bird.style.left = Math.random() * forestWidth + 'px';
+  bird.style.top = Math.random() * (forestHeight/2) + 'px';
+  forest.appendChild(bird);
+  birds.push({el: bird, speed: 2 + Math.random()*2, yBase: parseFloat(bird.style.top)});
+}
+
+// Rain
+const rainDrops = [];
+for(let i=0; i<100; i++){
+  const drop = document.createElement('div'); drop.className = 'raindrop';
+  drop.style.left = Math.random()*forestWidth + 'px';
+  drop.style.top = Math.random()*forestHeight + 'px';
+  forest.appendChild(drop);
+  rainDrops.push({el: drop, speed: 4 + Math.random()*3});
+}
+
+// Animate everything
+function animate(){
+  // Humans
+  humans.forEach(h=>{
+    let x = parseFloat(h.el.style.left);
+    x += h.speed;
+    if(x > forestWidth) x = -50;
+    h.el.style.left = x + 'px';
+    h.el.style.bottom = 50 + 3*Math.sin(Date.now()/300 + x/30) + 'px';
+  });
+
+  // Animals
+  animals.forEach(a=>{
+    let x = parseFloat(a.el.style.left);
+    x += a.speed * a.dir;
+    if(x > forestWidth - 50) a.dir = -1;
+    if(x < 0) a.dir = 1;
+    a.el.style.left = x + 'px';
+    a.el.style.bottom = 50 + 5*Math.sin(Date.now()/200 + x/50) + 'px';
+  });
+
+  // Birds
+  birds.forEach(b=>{
+    let x = parseFloat(b.el.style.left);
+    x += b.speed;
+    b.el.style.left = x + 'px';
+    b.el.style.top = b.yBase + 20*Math.sin(x/50) + 'px';
+    const leftWing = b.el.querySelector('.wing.left');
+    const rightWing = b.el.querySelector('.wing.right');
+    const flap = 20*Math.sin(Date.now()/100);
+    leftWing.style.transform = `rotate(${flap}deg)`;
+    rightWing.style.transform = `rotate(${-flap}deg)`;
+    if(x > forestWidth) b.el.style.left = '-20px';
+  });
+
+  // Rain
+  rainDrops.forEach(r=>{
+    let y = parseFloat(r.el.style.top);
+    y += r.speed;
+    if(y > forestHeight) y = -10;
+    r.el.style.top = y + 'px';
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>
