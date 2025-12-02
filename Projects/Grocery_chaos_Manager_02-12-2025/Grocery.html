@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Grocery.css">
+</head>
+<body>
+  <!-- <h1>🛒 Grocery Chaos Manager</h1>
+
+  <div class="input-section">
+    <input id="itemInput" placeholder="Add weird grocery item...">
+    <select id="categoryInput">
+      <option value="healthy">Healthy 🥦</option>
+      <option value="junk">Junk 🍟</option>
+      <option value="weird">Weird 🤡</option>
+    </select>
+    <button onclick="addItem()">Add Item</button>
+  </div>
+
+  <div class="controls">
+    <input id="searchBox" placeholder="Search items..." onkeyup="searchItems()">
+
+    <button onclick="sortAZ()">Sort A-Z</button>
+    <button onclick="sortZA()">Sort Z-A</button>
+    <button onclick="filterHealthy()">Healthy Only 🥦</button>
+    <button onclick="filterJunk()">Junk Only 🍟</button>
+  </div>
+
+  <h2>Items:</h2>
+  <ul id="list"></ul>
+
+  <h3>Total Items: <span id="count">0</span></h3> -->
+
+     <div class="container">
+
+    <h1>Grocery List</h1>
+
+    <!-- Add Item -->
+    <div class="inputBox">
+      <input id="itemInput" type="text" placeholder="Enter item...">
+      <button onclick="addItem()">Add</button>
+    </div>
+
+    <!-- Search -->
+    <input id="searchBox" type="text" placeholder="Search..." onkeyup="searchItems()">
+
+    <!-- Buttons -->
+    <div class="btnRow">
+      <button onclick="sortAZ()">Sort A-Z</button>
+      <button onclick="sortZA()">Sort Z-A</button>
+      <button onclick="filterHealthy()">Healthy</button>
+      <button onclick="filterJunk()">Junk</button>
+      <button onclick="filterWeird()">Weird</button>
+    </div>
+
+    <!-- Count -->
+    <p>Total Items: <span id="count">0</span></p>
+
+    <!-- List -->
+    <ul id="list"></ul>
+
+  </div>
+
+    <script src="./Grocery.js"></script>
+</body>
+</html>
