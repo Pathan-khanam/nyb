@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+<h1>Debounce Real World Examples</h1>
+
+<!-- 1. Search Input Autocomplete -->
+<section>
+  <h2>1. Search Input Autocomplete</h2>
+  <input type="text" id="search" placeholder="Type to search..." />
+  <div id="searchResults"></div>
+</section>
+
+<!-- 2. Window Resize Event -->
+<section>
+  <h2>2. Window Resize Event</h2>
+  <div id="resizeInfo">Resize the window to see the debounced output.</div>
+</section>
+
+<!-- 3. Scroll Event (Infinite Scroll) -->
+<section style="height:200px; overflow-y:scroll; border:1px solid #ccc;">
+  <h2>3. Scroll Event</h2>
+  <div id="scrollContent">
+    <p>Scroll me down...</p>
+    <div style="height:800px;"></div>
+  </div>
+</section>
+
+<!-- 4. Button Click (Prevent Multiple Submits) -->
+<section>
+  <h2>4. Button Click (Prevent Multiple Submits)</h2>
+  <button id="submitBtn">Submit</button>
+</section>
+
+<!-- 5. Filter Table Data -->
+<section>
+  <h2>5. Filter Table Data</h2>
+  <input type="text" id="filter" placeholder="Filter table..." />
+  <table border="1" id="table" style="margin-top:10px;">
+    <tr><td>Apple</td></tr>
+    <tr><td>Banana</td></tr>
+    <tr><td>Orange</td></tr>
+    <tr><td>Grapes</td></tr>
+  </table>
+</section>
+
+<!-- 6. Auto-Save Form Inputs -->
+<section>
+  <h2>6. Auto-Save Form Inputs</h2>
+  <textarea id="notes" placeholder="Type notes to auto-save..."></textarea>
+  <div id="autoSaveStatus"></div>
+</section>
+
+<!-- 7. Mouse Move Event -->
+<section>
+  <h2>7. Mouse Move Event</h2>
+  <div id="mouseMoveOutput">Move your mouse over this section.</div>
+</section>
+
+<!-- 8. Real-Time Username Validation -->
+<section>
+  <h2>8. Real-Time Username Validation</h2>
+  <input type="text" id="username" placeholder="Enter username..." />
+  <div id="usernameStatus"></div>
+</section>
+
+<!-- 9. Textarea Word Count -->
+<section>
+  <h2>9. Textarea Word Count</h2>
+  <textarea id="wordCountText" placeholder="Type some text..."></textarea>
+  <div id="wordCountOutput"></div>
+</section>
+
+<!-- 10. Simulated Voice-to-Text Transcription -->
+<section>
+  <h2>10. Simulated Voice-to-Text Transcription</h2>
+  <button id="voiceBtn">Simulate Speaking</button>
+  <div id="voiceOutput"></div>
+</section>
+    <script src="./debouncing.js"></script>
+</body>
+</html>

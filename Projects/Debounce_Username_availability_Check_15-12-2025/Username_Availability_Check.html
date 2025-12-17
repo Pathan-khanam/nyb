@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./UNAC.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Debounce Demo:Username Availability Check</h2>
+
+    <div class="search-wrapper">
+    <input type="text" id="username" placeholder="Type username..."/>
+    <span id="status"></span>
+    </div>
+
+    <div class="explanation">
+        <h3>How Debounce Works:</h3>
+        <ul>
+            <li>Debounce delays function execution until user stops typing for a specific time.</li>
+            <li>Rapid typing cancels previous calls.</li>
+            <li>Only the <strong>last input</strong> triggers the action.</li>
+        </ul>
+
+        <h3>Where It's Used in Real-Time: </h3>
+        <ul>
+            <li>Search bars with suggestions (Google, e-commerce sites)</li>
+            <li>Username/email availability checks in signup forms</li>
+            <li>Window resize or scroll event handling for performance</li>
+            <li>API calls triggered by user input</li>
+        </ul>
+    </div>
+
+    <div class="log-section">
+        <h3>Function Call Log:</h3>
+        <div id="log"></div>
+    </div>
+    </div>
+    <script src="./UNAC.js"></script>
+</body>
+</html>

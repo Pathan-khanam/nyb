@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./flipkart.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Shopping Icons -->
+<div class="bg-icons">
+  <span>🛒</span>
+  <span>📦</span>
+  <span>🛍️</span>
+  <span>🍎</span>
+  <span>💻</span>
+  <span>👕</span>
+  <span>🏠</span>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <div class="logo">ShopVibe</div>
+  <div class="nav-categories">
+    <div data-category="Home">Home
+      <div class="dropdown" id="homeDropdown"></div>
+    </div>
+    <div data-category="Kitchen">Kitchen
+      <div class="dropdown" id="kitchenDropdown"></div>
+    </div>
+    <div data-category="Fashion">Fashion
+      <div class="dropdown" id="fashionDropdown"></div>
+    </div>
+    <div data-category="Electronics">Electronics
+      <div class="dropdown" id="electronicsDropdown"></div>
+    </div>
+    <div data-category="Groceries">Groceries
+      <div class="dropdown" id="groceriesDropdown"></div>
+    </div>
+  </div>
+  <div class="cart" id="cartIcon">🛒 <div class="cart-count" id="cartCount">0</div></div>
+</div>
+
+<div class="container">
+  <!-- Full-width search -->
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search for products...">
+    <button id="shopNow">Shop Now</button>
+    <button class="add-cart-btn" id="addCartBtn">Add to Cart</button>
+  </div>
+
+  <!-- Mode buttons -->
+  <div class="modes">
+    <button class="mode-btn active" onclick="setMode('normal', this)">Normal</button>
+    <button class="mode-btn" onclick="setMode('throttle', this)">Throttle</button>
+    <button class="mode-btn" onclick="setMode('debounce', this)">Debounce</button>
+  </div>
+
+  <!-- Keystroke Tracks -->
+  <div class="tracks">
+    <div class="track" id="normalTrack"><label>Normal:</label></div>
+    <div class="track" id="throttleTrack"><label>Throttle:</label></div>
+    <div class="track" id="debounceTrack"><label>Debounce:</label></div>
+  </div>
+
+  <!-- Debounce progress bar -->
+  <div class="timer-bar">
+    <div class="timer-fill" id="timerFill"></div>
+  </div>
+
+  <!-- Mode Info / Shop Now content -->
+  <div class="bought-content" id="boughtContent">Type something and click Shop Now to see a trick!</div>
+</div>
+
+<!-- Cart Page Modal -->
+<div class="cart-page" id="cartPage">
+  <div class="cart-content">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button onclick="closeCart()" style="padding:6px 15px; border:none; border-radius:10px; background:#ff6a95; color:#fff; cursor:pointer;">Close</button>
+    </div>
+    <div id="cartItemsContainer"></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h3>ShopVibe</h3>
+  <p>Experience the ultimate Gen Z shopping vibe with fashion, electronics, groceries & more.</p>
+  <p>© 2025 ShopVibe. All rights reserved.</p>
+</div>
+
+    <script src="./flipkart.js"></script>
+</body>
+</html>

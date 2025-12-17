@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; padding: 20px; }
+button { margin: 5px; padding: 10px 20px; cursor: pointer; }
+#order-log div { padding: 10px; margin: 5px 0; border-radius: 5px; color: white; }
+.sync-order { background-color: #c0392b; } /* red */
+.async-order { background-color: #27ae60; } /* green */

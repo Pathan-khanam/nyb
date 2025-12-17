@@ -1,5 +1,5 @@
 var details ={
-    name:"khan",
+    name:"hi",
     age:20,
     city:'bnglr',
     address:{
@@ -54,7 +54,7 @@ function test(city, country){
 }
 
 
-var prsn = {name:'pathan'}
+var prsn = {name:'hello'}
 
 var b=test.bind(prsn,'mumbai','india')
 test.call(prsn, 'bnglr', 'india')

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+    Parent
+    <button id="child">Click Me</button>
+</div>
+
+<ul id="list">
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+</ul>
+
+<div id="grandparent" style="background:#f8b; padding:20px;">
+  Grandparent
+  <div id="parent" style="background:#8bf; padding:20px;">
+    Parent
+    <button id="child">Child Button</button>
+  </div>
+</div>
+<div id="chat">
+  <div class="message">Hello</div>
+  <div class="message">How are you?</div>
+  <div class="message">Bye!</div>
+</div>
+<div>
+  <input type="text" id="username" placeholder="Enter username">
+  <input type="password" id="password" placeholder="Enter password">
+  <p>Press "S" to save or "L" to log out (captured at document level)</p>
+</div>
+<div id="container" style="padding:20px; background:#f0f0f0;">
+  <div class="box" style="width:100px;height:100px;background:rgb(0, 247, 255);margin:10px;">Box 1</div>
+  <div class="box" style="width:100px;height:100px;background:green;margin:10px;">Box 2</div>
+  <div class="box" style="width:100px;height:100px;background:rgb(255, 0, 149);margin:10px;">Box 3</div>
+</div>
+
+<div id="notification-container" style="padding:20px; background:#f9f9f9; border:1px solid #ccc;">
+  <div class="notification" data-id="1">Notification 1</div>
+  <div class="notification" data-id="2">Notification 2</div>
+  <div class="notification" data-id="3">Notification 3</div>
+</div>
+<br>
+<button id="add-notification">Add Notification</button>
+
+<h1>Keyboard & Mouse Tracker</h1>
+<p>Click anywhere or press keys to see the event order.</p>
+<div id="status" style="margin-top:20px;"></div>
+
+
+<h2>Bubbling Example: Profile Names</h2>
+<div id="profiles">
+  <div class="profile">Alice</div>
+  <div class="profile">Bob</div>
+  <div class="profile">Charlie</div>
+</div>
+
+<hr>
+
+<h2>Delegation Example: Task List</h2>
+<div id="tasks">
+  <button class="task-btn">Task 1</button>
+  <button class="task-btn">Task 2</button>
+</div>
+<button id="add-task">Add Task</button>
+
+<hr>
+
+<h2>Capturing Example: Background Click</h2>
+<div id="background" style="height:150px; background:#eee; text-align:center; line-height:150px;">
+  Click anywhere here
+</div>
+
+<div id="log" style="margin-top:20px; font-family:monospace;"></div>
+<h2>Bubbling Example: Profile Names</h2>
+<div id="profiles">
+  <div class="profile" style="padding:10px; margin:5px; border:1px solid #000; cursor:pointer;">Khan</div>
+  <div class="profile" style="padding:10px; margin:5px; border:1px solid #000; cursor:pointer;">Sara</div>
+  <div class="profile" style="padding:10px; margin:5px; border:1px solid #000; cursor:pointer;">Riya</div>
+</div>
+
+<hr>
+
+<h2>Delegation Example: Task List</h2>
+<div id="tasks" style="margin-bottom:10px;"></div>
+<button id="add-task">Add Task</button>
+
+<hr>
+
+<h2>Capturing Example: Background Click</h2>
+<div id="background" style="height:150px; background:#eee; text-align:center; line-height:150px; border:1px solid #000;">
+  Click anywhere here
+</div>
+
+<div id="log" style="margin-top:20px; font-family:monospace;"></div>
+
+    <script src="./event_bubbling.js"></script>
+</body>
+</html>

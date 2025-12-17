@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+    display:none;
+}
+
+    </style>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <button id="btn2">Press Me </button>
+    <div id="box" style="width:100; height:100px;background: lightpink;"></div><br><br>
+    <label for="text">Event Listener:</label>
+    <input id="txt" placeholder="Type here"><br><br>
+      <form id="myform">
+        <label for="txt">Enter Name:</label>
+        <input type="text" placeholder="Type Your Name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <button onclick="sayHI()">Hi</button>
+
+    <div id="panel" class="hidden">Hello</div>
+    <button id="toggle">Toggle</button>
+    <input id="name" placeholder="Enter name">
+
+    <div id="drag" draggable="true" style="width:80px;height:80px;background:red"></div>
+<div id="drop" style="width:200px;height:200px;border:2px dashed black;margin-top:10px"></div>
+
+<div id="content" style="font-size: 20px; margin-bottom: 10px;">
+    Waiting for update...
+</div>
+
+<button id="btn">Start Demo</button>
+    <script src="./event.js"></script>
+
+<div id="status" style="font-size: 20px; margin-bottom: 10px;">Click to load data...</div>
+<button id="loadBtn">Load Data</button>
+
+
+</body>
+</html>

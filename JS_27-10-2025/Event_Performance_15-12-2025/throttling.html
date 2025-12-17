@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Throttle Real World Examples</h1>
+
+<!-- 1. Window Focus/Blur Event -->
+<section>
+  <h2>1. Window Focus/Blur Event</h2>
+  <div id="focusOutput">Switch tabs to see throttled output.</div>
+</section>
+
+<!-- 2. Network Bandwidth Monitoring -->
+<section>
+  <h2>2. Network Bandwidth Monitoring (Simulated)</h2>
+  <div id="networkOutput">Current speed: 0 Mbps</div>
+</section>
+
+<!-- 3. Game Scoreboard Updates -->
+<section>
+  <h2>3. Game Scoreboard Updates</h2>
+  <button id="scoreBtn">Score Point</button>
+  <div id="scoreOutput">Score: 0</div>
+</section>
+
+<!-- 4. Voice Volume Meter -->
+<section>
+  <h2>4. Voice Volume Level Meter (Simulated)</h2>
+  <div class="box" id="volumeMeter">Volume</div>
+</section>
+
+<!-- 5. Drag-to-Resize Panels -->
+<section>
+  <h2>5. Drag-to-Resize Panel</h2>
+  <div class="box" id="resizeBox" style="resize: both; overflow: auto;">Resize Me</div>
+</section>
+
+<!-- 6. Virtual Keyboard Input -->
+<section>
+  <h2>6. Virtual Keyboard Input</h2>
+  <input type="text" id="virtualKey" placeholder="Type..." />
+  <div id="keyOutput">Sent Keys: </div>
+</section>
+
+<!-- 7. Scroll-Triggered Analytics -->
+<section style="height:150px; overflow-y:scroll; border:1px solid #ccc;">
+  <h2>7. Scroll-Triggered Analytics</h2>
+  <div id="scrollContent" style="height:500px;">
+    Scroll inside this box...
+  </div>
+  <div id="scrollOutput">Last tracked scroll: 0</div>
+</section>
+
+<!-- 8. Multiplayer Position Sync -->
+<section>
+  <h2>8. Multiplayer Position Sync</h2>
+  <div class="box" id="playerBox">Drag Me</div>
+  <div id="positionOutput">Last synced position: X:0, Y:0</div>
+</section>
+
+<!-- 9. Auto-Update Weather Map -->
+<section>
+  <h2>9. Auto-Update Weather Map (Simulated)</h2>
+  <div id="weatherOutput">Last update: None</div>
+  <button id="weatherBtn">Simulate Weather Tick</button>
+</section>
+
+<!-- 10. Fitness Tracker Heart Rate Display -->
+<section>
+  <h2>10. Fitness Tracker Heart Rate Display (Simulated)</h2>
+  <div id="heartRateOutput">Heart Rate: 0 BPM</div>
+  <button id="heartBtn">Simulate Heartbeat</button>
+</section>
+
+    <script src="./throttling.js"></script>
+</body>
+</html>
