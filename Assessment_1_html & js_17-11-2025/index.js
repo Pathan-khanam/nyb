@@ -91,3 +91,6 @@ for(var i=1;i<=n;i++){
    row+=j+"";
 } console.log(row)
 }
+
+
+

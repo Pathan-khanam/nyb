@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bir.css">
+</head>
+<body>
+    
+
+<div class="container">
+    <h1>🍽️ Biryani House</h1>
+    <p class="tagline">Order → Cook → Serve</p>
+
+    <!-- ORDER SECTION -->
+    <div class="order-section">
+        <h2>Place Your Order</h2>
+        <div class="menu">
+            <label><input type="checkbox" class="item" value="180"> Veg Biryani – ₹180</label><br>
+            <label><input type="checkbox" class="item" value="250"> Chicken Biryani – ₹250</label><br>
+            <label><input type="checkbox" class="item" value="320"> Mutton Biryani – ₹320</label><br>
+            <label><input type="checkbox" class="item" value="60"> Raita – ₹60</label><br>
+        </div>
+
+        <button onclick="calculateBill()">Generate Bill</button>
+        <h3>Total Bill: <span id="bill">₹0</span></h3>
+    </div>
+
+    <!-- COOKING SECTION -->
+    <div class="cooking-section">
+        <button onclick="startCooking()">Start Cooking</button>
+        <h2>Cooking Status</h2>
+        <p id="status">Waiting for order...</p>
+    </div>
+</div>
+
+
+<script src="./bir.js"></script>
+</body>
+</html>

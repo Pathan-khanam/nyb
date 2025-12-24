@@ -1,0 +1,108 @@
+
+
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 60%;
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: darkred;
+}
+
+.subtitle {
+    color: gray;
+}
+
+ul {
+    text-align: left;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 60%;
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: darkred;
+}
+
+.tagline {
+    text-align: center;
+    color: gray;
+}
+
+h2 {
+    color: brown;
+    margin-top: 20px;
+}
+
+.menu {
+    font-size: 18px;
+    line-height: 2;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+#bill {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: gray;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./biryani.css">
+
+</head>
+<body>
+
+
+    <div class="container">
+    <h1>🍲 Biryani Cooking Simulator</h1>
+    <p class="subtitle">Real-World Cooking Process (Program Based)</p>
+
+    <h2>Cooking Steps</h2>
+    <ul id="steps">
+        <li>Step 1: Wash and soak rice</li>
+        <li>Step 2: Prepare gravy</li>
+        <li>Step 3: Cook rice</li>
+        <li>Step 4: Layer rice and gravy</li>
+        <li>Step 5: Dum (slow cooking)</li>
+        <li>Step 6: Biryani ready</li>
+    </ul>
+
+    <button onclick="startCooking()">Start Cooking</button>
+
+    <h2>Status</h2>
+    <p id="status">Waiting to start...</p>
+</div>
+   
+<div class="container">
+    <h1>🍽️ Biryani House</h1>
+    <p class="tagline">Real World Restaurant Ordering System</p>
+
+    <h2>Menu</h2>
+
+    <div class="menu">
+        <label>
+            <input type="checkbox" value="180" class="item">
+            Veg Biryani – ₹180
+        </label><br>
+
+        <label>
+            <input type="checkbox" value="250" class="item">
+            Chicken Biryani – ₹250
+        </label><br>
+
+        <label>
+            <input type="checkbox" value="320" class="item">
+            Mutton Biryani – ₹320
+        </label><br>
+
+        <label>
+            <input type="checkbox" value="60" class="item">
+            Raita – ₹60
+        </label><br>
+
+        <label>
+            <input type="checkbox" value="40" class="item">
+            Soft Drink – ₹40
+        </label>
+    </div>
+
+    <button onclick="calculateBill()">Generate Bill</button>
+
+    <h2>Total Bill</h2>
+    <p id="bill">₹0</p>
+
+    <footer>
+        <p>Project by: Student Name | Class</p>
+    </footer>
+</div>
+
+    <script src="./biryani.js"></script>
+</body>
+</html>

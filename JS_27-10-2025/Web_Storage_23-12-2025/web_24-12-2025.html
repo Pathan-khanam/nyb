@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="username" placeholder="Enter name">
+<p id="display"></p>
+<input id="task" placeholder="Add task">
+<button id="add">Add</button>
+<ul id="tasks"></ul> -->
+
+<h1>Storage Demo</h1>
+
+<div class="container">
+  <!-- Local Storage Card -->
+  <div class="card local">
+    <div class="notification" id="localNotify">Saved!</div>
+    <h2>Local Storage (Persistent)</h2>
+    <label>Username:</label>
+    <input type="text" id="localUsername" placeholder="Enter your name">
+    <button id="clearLocal">Clear Local Storage</button>
+    <p>Saved: <span id="displayLocal">—</span> <span class="emoji" id="userEmoji">🙂</span></p>
+    <pre id="localPanel">Loading...</pre>
+  </div>
+
+  <!-- Session Storage Card -->
+  <div class="card session">
+    <div class="notification" id="sessionNotify">Updated!</div>
+    <h2>Session Storage (Temporary)</h2>
+    <p>Session Visits: <span id="sessionVisits">0</span> <span class="emoji" id="visitEmoji">👀</span></p>
+    <button id="incrementSession">+1 Visit</button>
+    <button id="clearSession">Reset Session</button>
+    <pre id="sessionPanel">Loading...</pre>
+  </div>
+</div>
+
+    <script src="./web_24-12-2025.js"></script>
+</body>
+</html>

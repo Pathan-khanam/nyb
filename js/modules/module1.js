@@ -7,3 +7,4 @@
 export default function logMsg(msg){
     console.log("LOG:",msg)
 }
+
